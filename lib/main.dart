@@ -2,8 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:theme_module_batch40/controllers/providers/testing_provider.dart';
 import 'package:theme_module_batch40/views/provider_module/provider_screen.dart';
+import 'package:theme_module_batch40/views/shared_preferences/shared_preference_screen.dart';
+import 'package:theme_module_batch40/views/shared_preferences/shared_preferences_screen1.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
   runApp(
     MultiProvider(providers: [
       ChangeNotifierProvider(create: (context) => TestingProvider())
@@ -26,7 +29,9 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: ProviderScreen()
+      home: SharedPreferencesScreen1()
+      //SharedPreferenceScreen()
+      //ProviderScreen()
     );
   }
 }
