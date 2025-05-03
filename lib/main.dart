@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:theme_module_batch40/controllers/providers/testing_provider.dart';
-import 'package:theme_module_batch40/views/provider_module/provider_screen.dart';
-import 'package:theme_module_batch40/views/shared_preferences/shared_preference_screen.dart';
-import 'package:theme_module_batch40/views/shared_preferences/shared_preferences_screen1.dart';
+import 'package:theme_module_batch40/views/apis_module/api_screen.dart';
+import 'package:theme_module_batch40/views/apis_module/get_api_screen.dart';
+import 'package:theme_module_batch40/views/apis_module/get_with_model_screen.dart';
+
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -29,7 +30,10 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: SharedPreferencesScreen1()
+      home: GetWithModelScreen()
+      //GetApiScreen()
+      //ApiScreen()
+      //SharedPreferencesScreen1()
       //SharedPreferenceScreen()
       //ProviderScreen()
     );
